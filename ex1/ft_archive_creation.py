@@ -15,6 +15,7 @@ def ft_archive_creation() -> None:
     try:
         f: typing.IO[str] = open(filename, "r")
         content = f.read()
+        lines = content.splitlines()
         print("---\n")
         print(content)
         print("\n---")
@@ -22,10 +23,10 @@ def ft_archive_creation() -> None:
         print(f"File '{filename}' closed.")
     except Exception as e:
         print(f"Error opening file '{filename}': {e}")
+        return
     # ACCESS DENIED PATH
     # /mnt/c/Windows/System32/config/SAM
 
-    lines = content.splitlines()
     new_content = ""
     print("\nTransform data:")
     print("---\n")
