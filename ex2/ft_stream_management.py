@@ -7,7 +7,7 @@ import typing
 def ft_stream_management() -> None:
     print("=== Cyber Archives Recovery & Preservation ===")
     if len(sys.argv) != 2:
-        sys.stdout.write("Usage: ft_ancient_text.py <file>")
+        sys.stderr.write("[STDERR] Usage: ft_ancient_text.py <file>\n")
         return
 
     filename = sys.argv[1]

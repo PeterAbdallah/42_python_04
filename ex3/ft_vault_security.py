@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def secure_archive(fname: str, operation: str | None = "read",
+def secure_archive(fname: str, operation: str = "read",
                    content: str | None = None) -> tuple[bool, str]:
     try:
         # READ
